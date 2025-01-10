@@ -43,7 +43,6 @@ Real-time cryptocurrency statistics and analysis platform
 crypto-stats/
 ├── 📂 config/
 ├── 📂 controllers/
-├── 📂 middlewares/
 ├── 📂 models/
 ├── 📂 routes/
 ├── 📂 utils/
