@@ -15,7 +15,15 @@ const port = process.env.PORT || 3000;
 connectDB();
 app.use(express.json());
 app.use(cors());
-app.use(helmet());
+app.use(
+    helmet.contentSecurityPolicy({
+      directives: {
+        defaultSrc: ["'self'"],
+        scriptSrc: ["'self'", "'unsafe-inline'", "'unsafe-eval'", "https://vercel.live"],
+        connectSrc: ["'self'", "https://vercel.live"],
+      },
+    })
+  );
 app.use('/api', cryptoRoutes);
 app.get('/', (req, res) => {
     res.send('Welcome to the Crypto API');

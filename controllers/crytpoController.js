@@ -18,6 +18,7 @@ const getCryptoStats = async (req, res) => {
         marketCap: latestData.marketCap,
         '24hChange': latestData.change24h,
     });
+    
 };
 
 const getCryptoDeviation = async (req, res) => {
