@@ -59,3 +59,4 @@ ehthumbs.db
 *.orig
 *.tmp
 *.temp
+.vercel
